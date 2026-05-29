@@ -306,3 +306,90 @@ button {
     font-size: 16px;
     font-family: inherit;
 }
+/* ========================================= */
+/* TRUST & EXPERIENCE BANNER STYLING */
+/* ========================================= */
+.trust-banner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--powertrac-yellow);
+    padding: 30px 20px;
+    margin-bottom: 50px;
+    text-align: center;
+    flex-wrap: wrap; /* Ensures it stacks nicely on mobile phones */
+    gap: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.trust-item h3 {
+    font-size: 28px;
+    color: var(--dark-grey);
+    margin: 0 0 5px 0;
+    font-weight: 900;
+}
+
+.trust-item p {
+    margin: 0;
+    color: #333;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+/* ========================================= */
+/* MOBILE RESPONSIVENESS (SMARTPHONES) */
+/* ========================================= */
+@media (max-width: 768px) {
+    /* 1. Fix the Navigation Bar */
+    header {
+        flex-direction: column;
+        padding: 15px 10px;
+        text-align: center;
+    }
+    
+    .logo-container {
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+    
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* 2. Fix the Hero Section */
+    .hero {
+        padding: 40px 20px;
+    }
+    
+    .hero h1 {
+        font-size: 28px; /* Shrinks the giant text to fit phone screens */
+    }
+
+    /* 3. Fix the Trust Banner */
+    .trust-banner {
+        flex-direction: column; /* Stacks the 3 items vertically */
+        gap: 30px;
+        padding: 40px 20px;
+    }
+
+    /* 4. Fix the Tractor Grids */
+    .grid-container {
+        grid-template-columns: 1fr; /* Forces exactly ONE tractor per row on phones */
+        padding: 10px;
+        gap: 20px;
+    }
+
+    /* 5. Fix the Contact Page & Modals */
+    .contact-info-container {
+        grid-template-columns: 1fr; /* Stacks the address and map */
+    }
+    
+    .modal-content {
+        width: 95%; /* Ensures pop-ups don't bleed off the edges of the screen */
+        padding: 20px;
+    }
+}
