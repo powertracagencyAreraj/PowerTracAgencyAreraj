@@ -26,6 +26,10 @@ const translations = {
         featuredTitle: "हमारे लोकप्रिय मॉडल",
         btnSeeAll: "सभी ट्रैक्टर्स देखें",
         ourPhone: "फ़ोन नंबर",
+        trustExpTitle: "5+ वर्षों का अनुभव",
+trustExpDesc: "किसानों की सेवा में",
+trustCustomers: "संतुष्ट किसान",
+trustDealer: "अधिकृत विक्रेता",
     },
     
     en: {
@@ -55,5 +59,9 @@ const translations = {
         featuredTitle: "Our Popular Models",
         btnSeeAll: "See All Tractors",
         ourPhone: "Phone Number",
+        trustExpTitle: "5+ Years Experience",
+trustExpDesc: "Serving the Farmers",
+trustCustomers: "Happy Customers",
+trustDealer: "Authorized Dealer",
     }
 };
