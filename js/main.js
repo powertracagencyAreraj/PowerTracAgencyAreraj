@@ -10,6 +10,7 @@
 // ==========================================
 // 2. LANGUAGE SWITCHER LOGIC (UPGRADED)
 // ==========================================
+localStorage.removeItem('agencyLang'); 
 let currentLang = localStorage.getItem('agencyLang') || 'hi';
 
 document.addEventListener("DOMContentLoaded", () => {
