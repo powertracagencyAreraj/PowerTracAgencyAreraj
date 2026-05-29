@@ -60,6 +60,25 @@
         </section>
     </main>
 
+    <div id="welcome-modal" class="modal" style="z-index: 9999;">
+        <div class="modal-content" style="text-align: center; padding: 40px 20px;">
+            <h2 style="color: var(--powertrac-yellow); margin-bottom: 15px;">नमस्ते / Hello</h2>
+            
+            <p style="margin-bottom: 10px; color: var(--dark-grey); font-size: 20px;">
+                <strong>क्या आप इस भाषा में सहज हैं, सर? या आप इसे बदलना चाहते हैं?</strong>
+            </p>
+            
+            <p style="margin-bottom: 25px; color: #777; font-size: 15px;">
+                (Are you comfortable with this language, Sir? Or do you want to change it?)
+            </p>
+            
+            <div style="display: flex; justify-content: center; gap: 15px;">
+                <button class="btn-primary" onclick="enterSite('hi')">हिंदी (Hindi)</button>
+                <button class="btn-outline" onclick="enterSite('en')">English</button>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     
     <script src="js/translations.js"></script>
