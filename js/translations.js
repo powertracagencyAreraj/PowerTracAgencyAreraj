@@ -25,6 +25,7 @@ const translations = {
         errorMsg: "कुछ गलत हो गया। कृपया पुनः प्रयास करें।",
         featuredTitle: "हमारे लोकप्रिय मॉडल",
         btnSeeAll: "सभी ट्रैक्टर्स देखें",
+        ourPhone: "फ़ोन नंबर",
     },
     
     en: {
@@ -53,5 +54,6 @@ const translations = {
         errorMsg: "Something went wrong. Please try again.",
         featuredTitle: "Our Popular Models",
         btnSeeAll: "See All Tractors",
+        ourPhone: "Phone Number",
     }
 };
