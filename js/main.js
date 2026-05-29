@@ -13,9 +13,20 @@
 let currentLang = localStorage.getItem('agencyLang') || 'hi';
 
 document.addEventListener("DOMContentLoaded", () => {
-    applyLanguage(currentLang);
-    fetchTractors(); // Runs if on the inventory page
-    fetchFeaturedTractors(); // Runs if on the homepage
+    // Check if they have visited before
+    const hasVisited = localStorage.getItem('agencyLang');
+    
+    if (!hasVisited) {
+        // If it's their first time, show the welcome gate!
+        document.getElementById('welcome-modal').style.display = 'flex';
+    } else {
+        // If they've been here before, just load normally
+        applyLanguage(currentLang);
+    }
+    
+    // Run the tractor fetches if the functions exist on the page
+    if (typeof fetchTractors === "function") fetchTractors();
+    if (typeof fetchFeaturedTractors === "function") fetchFeaturedTractors();
 });
 
 function toggleLanguage() {
@@ -213,5 +224,47 @@ async function fetchFeaturedTractors() {
     } catch (error) {
         console.error('Error fetching featured tractors:', error);
         featuredGrid.innerHTML = '<p>Could not load tractors.</p>';
+    }
+}
+
+// ==========================================
+// 6. VOICE GREETING & WELCOME GATE (HYBRID)
+// ==========================================
+function enterSite(selectedLang) {
+    // 1. Hide the welcome modal
+    document.getElementById('welcome-modal').style.display = 'none';
+    
+    // 2. Set the website language
+    currentLang = selectedLang;
+    localStorage.setItem('agencyLang', currentLang);
+    applyLanguage(currentLang);
+    
+    // 3. Play the right audio based on their choice
+    if (selectedLang === 'hi') {
+        // Play the premium ElevenLabs MP3 for Hindi
+        try {
+            let greetingAudio = new Audio('audio/greeting-hi.mp3');
+            greetingAudio.play();
+        } catch (error) {
+            console.error("Could not play the custom Hindi audio:", error);
+        }
+    } else {
+        // Use the built-in polite computer voice for English
+        const synth = window.speechSynthesis;
+        const utterance = new SpeechSynthesisUtterance("Welcome to Powertrac Agency. We are at your service.");
+        
+        utterance.lang = 'en-US';
+        utterance.rate = 0.85;  // Slower speed
+        utterance.pitch = 1.15; // Softer pitch
+        
+        const voices = synth.getVoices();
+        const premiumVoice = voices.find(voice => voice.lang === utterance.lang && voice.name.includes('Google')) 
+                          || voices.find(voice => voice.lang === utterance.lang);
+                          
+        if (premiumVoice) {
+            utterance.voice = premiumVoice;
+        }
+
+        synth.speak(utterance);
     }
 }
