@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>हमारी सेवाएं | Powertrac Agency</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh; margin: 0; font-family: sans-serif;">
+
+    <header style="display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; background-color: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+        <div class="logo-container">
+            <h2 data-i18n="agencyLogo" style="color: var(--dark-grey); margin: 0;">पावरट्रैक <span style="color: var(--powertrac-yellow);">एजेंसी</span></h2>
+        </div>
+        
+        <nav class="nav-links">
+            <a href="index.html" data-i18n="navHome" style="margin: 0 10px; text-decoration: none; color: #333; font-weight: bold;">होम</a>
+            <a href="inventory.html" data-i18n="navInventory" style="margin: 0 10px; text-decoration: none; color: #333; font-weight: bold;">ट्रैक्टर</a>
+            <a href="services.html" data-i18n="navServices" style="margin: 0 10px; text-decoration: none; color: var(--powertrac-yellow); font-weight: bold;">सेवाएं</a>
+            <a href="contact.html" data-i18n="navContact" style="margin: 0 10px; text-decoration: none; color: #333; font-weight: bold;">संपर्क</a>
+            
+            <button onclick="window.toggleLanguage()" class="lang-btn" style="margin-left: 15px; padding: 5px 15px; background-color: var(--powertrac-yellow); border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">EN/HI</button>
+        </nav>
+    </header>
+
+    <main style="flex: 1;">
+        <section class="services-section" style="padding: 50px 20px; text-align: center; background-color: #f9f9f9; min-height: 70vh;">
+            <h1 data-i18n="servicesTitle" style="color: var(--powertrac-yellow); font-size: 36px; margin-bottom: 10px;">हमारी सेवाएं</h1>
+            <p data-i18n="servicesSubtitle" style="color: var(--dark-grey); font-size: 18px; margin-bottom: 40px;">हम आपके ट्रैक्टर को खेत में हमेशा तैयार रखते हैं।</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🛠️</div>
+                    <h3 data-i18n="srvRepairTitle">सर्विसिंग और मरम्मत</h3>
+                    <p data-i18n="srvRepairDesc">हमारे अनुभवी मैकेनिकों द्वारा आपके ट्रैक्टर की पूरी जांच और मरम्मत।</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">⚙️</div>
+                    <h3 data-i18n="srvPartsTitle">असली स्पेयर पार्ट्स</h3>
+                    <p data-i18n="srvPartsDesc">लंबे समय तक चलने वाले और भरोसेमंद 100% असली पावरट्रैक पार्ट्स।</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🤝</div>
+                    <h3 data-i18n="srvFinanceTitle">आसान फाइनेंस सुविधा</h3>
+                    <p data-i18n="srvFinanceDesc">किसानों के लिए कम ब्याज दर पर आसान लोन और किश्त की सुविधा।</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="background-color: var(--dark-grey, #333); color: #fff; text-align: center; padding: 20px; margin-top: auto;">
+        <p>&copy; 2026 Powertrac Agency, Areraj. <span data-i18n="footerRights">सभी अधिकार सुरक्षित।</span></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    
+    <script src="js/translations.js"></script>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Powertrac Tractors | Authorized Agency</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header class="navbar">
+       <div class="logo">
+            <a href="index.html" class="logo-container">
+                <img src="images/logo.png" alt="Powertrac Agency" class="agency-logo">
+                <h2 data-i18n="agencyName">पावरट्रैक एजेंसी</h2>
+            </a>
+        </div>
+        
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" data-i18n="navHome">होम</a></li>
+                
+                <li><a href="inventory.html" data-i18n="navModels">ट्रैक्टर मॉडल</a></li>
+                
+                <li><a href="services.html" data-i18n="navServices" style="margin: 0 10px; text-decoration: none; color: #333; font-weight: bold;">सेवाएं</a>
+                
+                <li><a href="contact.html" data-i18n="navContact">संपर्क करें</a></li>
+            </ul>
+        </nav>
+        
+        <div class="nav-actions">
+
+        </div>
+
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 data-i18n="heroTitle">खेती की असली ताकत, अब आपके शहर में।</h1>
+                <p data-i18n="heroSubtitle">विश्वसनीय पावरट्रैक ट्रैक्टर्स और बेहतरीन सर्विस के लिए आज ही हमारी एजेंसी पधारें।</p>
+            </div>
+        </section>
+    </main>
+
+    <main>
+        <section class="hero">
+            </section>
+
+            <section class="trust-banner">
+            <div class="trust-item">
+                <h3 data-i18n="trustExpTitle">5+ वर्षों का अनुभव</h3>
+                <p data-i18n="trustExpDesc">किसानों की सेवा में</p>
+            </div>
+            <div class="trust-item">
+                <h3>500+</h3> <p data-i18n="trustCustomers">संतुष्ट किसान</p>
+            </div>
+            <div class="trust-item">
+                <h3 data-i18n="trustDealer">अधिकृत विक्रेता</h3>
+                <p>Powertrac Agency</p>
+            </div>
+        </section>
+
+        <section class="featured-section" style="padding-bottom: 50px;">
+            <h2 data-i18n="featuredTitle" class="section-title">हमारे लोकप्रिय मॉडल</h2>
+            
+            <div id="featured-tractors-grid" class="grid-container">
+                <p style="text-align: center; width: 100%;">Loading featured tractors...</p>
+            </div>
+            
+            <div style="text-align: center; margin-top: 20px;">
+                <button class="btn-outline" onclick="window.location.href='inventory.html'" data-i18n="btnSeeAll">सभी ट्रैक्टर्स देखें</button>
+            </div>
+        </section>
+    </main>
+
+    <div id="welcome-modal" class="modal" style="z-index: 9999;">
+        <div class="modal-content" style="text-align: center; padding: 40px 20px;">
+            <h2 style="color: var(--powertrac-yellow); margin-bottom: 15px;">नमस्ते / Hello</h2>
+            
+            <p style="margin-bottom: 10px; color: var(--dark-grey); font-size: 20px;">
+                <strong>क्या आप इस भाषा में सहज हैं, सर? या आप इसे बदलना चाहते हैं?</strong>
+            </p>
+            
+            <p style="margin-bottom: 25px; color: #777; font-size: 15px;">
+                (Are you comfortable with this language, Sir? Or do you want to change it?)
+            </p>
+            
+            <div style="display: flex; justify-content: center; gap: 15px;">
+                <button class="btn-primary" onclick="enterSite('hi')">हिंदी (Hindi)</button>
+                <button class="btn-outline" onclick="enterSite('en')">English</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    
+    <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

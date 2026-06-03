@@ -1,0 +1,435 @@
+/* Basic Reset */
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Color Palette */
+:root {
+    --powertrac-yellow: #fbd304;
+    --dark-grey: #222222;
+    --light-grey: #f4f4f4;
+    --white: #ffffff;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo h2 {
+    color: var(--dark-grey);
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+/* Upgraded Navigation Menu (Now as Buttons!) */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px; /* Tighter gap so the buttons sit nicely */
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark-grey);
+    background-color: var(--powertrac-yellow); /* Powertrac Yellow Background */
+    font-weight: 600;
+    padding: 10px 20px; /* Gives them the shape of a button */
+    border-radius: 5px; /* Rounded corners */
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+/* What happens when you hover over the new buttons */
+.nav-links a:hover {
+    background-color: var(--dark-grey);
+    color: var(--powertrac-yellow); /* Flips to Yellow text on Dark background */
+    border: 2px solid var(--powertrac-yellow);
+}
+
+.nav-actions {
+    display: flex;
+    gap: 15px;
+}
+/* Logo Styling */
+.agency-logo {
+    max-height: 85px; /* Keeps the logo at a professional height */
+    width: auto;      /* Ensures the image doesn't stretch or warp */
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* Optional: Adds a slight "bump" effect when hovering over the logo */
+.agency-logo:hover {
+    transform: scale(1.05);
+}
+/* Keeps the logo image and the text perfectly aligned in a row */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Adds a nice 15px space between the picture and the words */
+    text-decoration: none; /* Stops the text from having a blue link underline */
+}
+
+.logo-container h2 {
+    color: var(--dark-grey);
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin: 0;
+    transition: color 0.3s;
+}
+
+/* Makes the text glow yellow when you hover over the logo area */
+.logo-container:hover h2 {
+    color: var(--powertrac-yellow);
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--powertrac-yellow);
+    color: var(--dark-grey);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #e5bf03;
+}
+
+.btn-secondary {
+    background-color: var(--dark-grey);
+    color: var(--powertrac-yellow);
+    border: none;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--dark-grey);
+    color: var(--dark-grey);
+}
+
+/* Hero Section */
+.hero {
+    /* Placeholder for a real tractor image */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1592982537447-7440770cbfc9?q=80&w=2000&auto=format&fit=crop') center/cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.hero-content {
+    max-width: 600px;
+    color: var(--white);
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--powertrac-yellow);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+/* Section Titles */
+.section-title {
+    text-align: center;
+    margin: 40px 0;
+    font-size: 2.5rem;
+    color: var(--dark-grey);
+}
+
+/* Tractor Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 5%;
+    margin-bottom: 50px;
+}
+
+.tractor-card {
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.tractor-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Professional Image Styling */
+.tractor-photo {
+    width: 100%;
+    height: 220px;
+    object-fit: contain; /* Changed from 'cover' to 'contain' */
+    background-color: #f9f9f9; /* Adds a light background in case there is empty space */
+    border-bottom: 4px solid var(--powertrac-yellow);
+    display: block;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    margin-bottom: 10px;
+    color: var(--dark-grey);
+}
+
+.card-content p {
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.inquiry-btn {
+    margin-top: 15px;
+    width: 100%;
+}
+
+/* Contact Page Layout */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 0 5%;
+    margin-bottom: 50px;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-info h3 {
+    margin-top: 20px;
+    color: var(--dark-grey);
+}
+
+.map-container {
+    flex: 2;
+    min-width: 300px;
+}
+
+/* ========================= */
+/* MODAL / POP-UP STYLING    */
+/* ========================= */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #555;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: var(--powertrac-yellow);
+}
+
+.selected-tractor-text {
+    font-weight: bold;
+    color: var(--powertrac-yellow);
+    background: var(--dark-grey);
+    padding: 5px 10px;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 10px 0 20px 0;
+}
+
+#inquiry-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#inquiry-form input, #inquiry-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: inherit;
+}
+/* ========================================= */
+/* TRUST & EXPERIENCE BANNER STYLING */
+/* ========================================= */
+.trust-banner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--powertrac-yellow);
+    padding: 30px 20px;
+    margin-bottom: 50px;
+    text-align: center;
+    flex-wrap: wrap; /* Ensures it stacks nicely on mobile phones */
+    gap: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.trust-item h3 {
+    font-size: 28px;
+    color: var(--dark-grey);
+    margin: 0 0 5px 0;
+    font-weight: 900;
+}
+
+.trust-item p {
+    margin: 0;
+    color: #333;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+/* ========================================= */
+/* MOBILE RESPONSIVENESS (SMARTPHONES) */
+/* ========================================= */
+@media (max-width: 768px) {
+    /* 1. Fix the Navigation Bar */
+    header {
+        flex-direction: column;
+        padding: 15px 10px;
+        text-align: center;
+    }
+    
+    .logo-container {
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+    
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* 2. Fix the Hero Section */
+    .hero {
+        padding: 40px 20px;
+    }
+    
+    .hero h1 {
+        font-size: 28px; /* Shrinks the giant text to fit phone screens */
+    }
+
+    /* 3. Fix the Trust Banner */
+    .trust-banner {
+        flex-direction: column; /* Stacks the 3 items vertically */
+        gap: 30px;
+        padding: 40px 20px;
+    }
+
+    /* 4. Fix the Tractor Grids */
+    .grid-container {
+        grid-template-columns: 1fr; /* Forces exactly ONE tractor per row on phones */
+        padding: 10px;
+        gap: 20px;
+    }
+
+    /* 5. Fix the Contact Page & Modals */
+    .contact-info-container {
+        grid-template-columns: 1fr; /* Stacks the address and map */
+    }
+    
+    .modal-content {
+        width: 95%; /* Ensures pop-ups don't bleed off the edges of the screen */
+        padding: 20px;
+    }
+}
+/* ========================================= */
+/* SERVICES PAGE STYLING */
+/* ========================================= */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-top: 5px solid var(--powertrac-yellow);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    color: var(--dark-grey);
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+}
